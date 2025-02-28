@@ -2,7 +2,7 @@
  * app.js
  * Versión 2.0
  *  - Autor: Héctor Arciniega.
- *  - Fallback manual si no se clickea sugerencia.
+ *  - Fallback manual si no se selecciona la sugerencia.
  *  - Umbral de factibilidad (parada muy alejada => descartar ruta).
  *  - Opción de unidireccionalidad (comentada).
  *******************************************************/
