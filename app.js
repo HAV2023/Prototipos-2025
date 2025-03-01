@@ -320,7 +320,7 @@ function markDestinationAndCalculateBestRoute() {
 }
 
 /**
- * Fallback: en caso de que el usuario no cliquee una sugerencia,
+ * Fallback: en caso de que el usuario no haga clic en una sugerencia,
  * usamos la API de geocodificación con el texto ingresado en la caja.
  */
 function fallbackGeocodeThen(onDone) {
@@ -392,14 +392,14 @@ function calculateBestRoute() {
     }
 
     // 2) Encuentra la parada más cercana al usuario (aquí no sabemos su lat/lon, pues en esta versión no se pide geoloc).
-    //    Suponiendo que TÚ (usuario) eres un “punto de partida” X. (Pero en la versión “antigua” no tenemos user location).
-    //    Originalmente tu findBestRoute() NO usaba geolocalización del usuario, solo el destino.
+    //    Suponiendo que el (usuario) es un “punto de partida” X. (Pero en la versión “antigua” no tenemos user location).
+    //    Originalmente el findBestRoute() NO usaba geolocalización del usuario, solo el destino.
     //    Por lo tanto, lo que hace es: "Solo se fija en la parada más cercana al destino".
     //    Dejamos la lógica tal cual estaba, para no romper:
     //    Aun así, aplicamos la misma idea del umbral de dist para el “destino”.
 
     // Por compatibilidad, se asume que "closestStop" vendrá de la comparación con el destino:
-    // (En tu antigua versión, solo usabas 'closestStop' basándote en dist al DESTINO, no al user).
+    // (En la antigua versión, solo usabamos 'closestStop' basándose en dist al DESTINO, no al user).
     // Ajustamos la nomenclatura para no confundir:
     const dist = minDistDest;
     const s = stopDest;
